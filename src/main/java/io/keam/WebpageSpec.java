@@ -1,5 +1,9 @@
 package io.keam;
 
+/**
+ * Webpage Spec
+ * @author Jon Keam
+ */
 public class WebpageSpec {
 
     private String markdown;
