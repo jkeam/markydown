@@ -1,3 +1,3 @@
-# Generated Project Skeleton
+# Markydown
 
-A simple operator that copies the value in a spec to a ConfigMap. 
+A simple operator that creates a page from markdown.
