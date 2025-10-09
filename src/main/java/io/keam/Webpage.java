@@ -12,4 +12,8 @@ import io.fabric8.kubernetes.model.annotation.Version;
 @Group("io.keam")
 @Version("v1")
 public class Webpage extends CustomResource<WebpageSpec,WebpageStatus> implements Namespaced {
+  @Override
+  public String toString() {
+    return "WebPage{" + "spec=" + spec + ", status=" + status + '}';
+  }
 }
