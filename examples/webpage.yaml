@@ -1,4 +1,4 @@
-apiVersion: io.keam
+apiVersion: io.keam/v1
 kind: Webpage
 metadata:
   name: webpage

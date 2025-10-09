@@ -16,7 +16,7 @@ mvn exec:java -Dexec.mainClass="io.keam.Runner"
 In shell 2:
 
 ```shell
-kubectl apply -k ./examples/webpage.yaml
+kubectl apply -f ./examples/webpage.yaml
 ```
 
 ## Links
