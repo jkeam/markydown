@@ -1,0 +1,8 @@
+apiVersion: io.keam
+kind: Webpage
+metadata:
+  name: webpage
+spec:
+  markdown: |-
+    # Webpage
+    This is an awesome webpage.

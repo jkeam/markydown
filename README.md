@@ -2,6 +2,23 @@
 
 A simple operator that creates a page from markdown.
 
+## Instructions
+
+In shell 1:
+
+```shell
+sdk env
+mvn clean install -DskipTests  # running tests cleans out my yaml
+kubectl apply -f target/classes/META-INF/fabric8/webpages.io.keam-v1.yml
+mvn exec:java -Dexec.mainClass="io.keam.Runner"
+```
+
+In shell 2:
+
+```shell
+kubectl apply -k ./examples/webpage.yaml
+```
+
 ## Links
 
 1. [Java Operator SDK](https://github.com/operator-framework/java-operator-sdk)
