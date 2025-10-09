@@ -13,8 +13,9 @@ import static org.awaitility.Awaitility.await;
 class MarkydownReconcilerIntegrationTest {
 
     public static final String RESOURCE_NAME = "test1";
-    public static final String INITIAL_VALUE = "initial value";
-    public static final String CHANGED_VALUE = "changed value";
+    public static final String RESOURCE_NAMESPACE = "markydown";
+    public static final String INITIAL_VALUE = "* Title";
+    public static final String CHANGED_VALUE = "* Changed Title";
 
     @RegisterExtension
     LocallyRunOperatorExtension extension =
@@ -49,12 +50,13 @@ class MarkydownReconcilerIntegrationTest {
     }
 
     Webpage testResource() {
-        var resource = new Webpage();
-        resource.setMetadata(new ObjectMetaBuilder()
-                .withName(RESOURCE_NAME)
-                .build());
-        resource.setSpec(new WebpageSpec());
-        resource.getSpec().setMarkdown(INITIAL_VALUE);
+        final Webpage resource = new Webpage();
+        resource.setMetadata(
+                new ObjectMetaBuilder()
+                        .withName(RESOURCE_NAME)
+                        .withNamespace(RESOURCE_NAMESPACE)
+                        .build());
+        resource.setSpec(new WebpageSpec(INITIAL_VALUE));
         return resource;
     }
 }

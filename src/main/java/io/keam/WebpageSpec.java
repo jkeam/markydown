@@ -6,6 +6,14 @@ package io.keam;
  */
 public class WebpageSpec {
 
+    public WebpageSpec() {
+        markdown = "";
+    }
+
+    public WebpageSpec(final String markdown) {
+        this.markdown = markdown;
+    }
+
     private String markdown;
 
     public String getMarkdown() {
